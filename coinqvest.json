@@ -1,8 +1,32 @@
 {
-    "description": "Bitcoin  payment",
-    "mode": "sandbox",
-    "client_id": "this_is_not_real",
-    "client_secret": "this_is_not_real",
-    "paypalCartDescription": "BKLYN",
-    "paypalCurrency": "USD"
+    "properties": {
+        "description": {
+            "type": "string"
+        },
+        "mode": {
+            "type": "string",
+            "enum": ["sandbox", "live"]
+        },
+        "client_id": {
+            "type": "string"
+        },
+        "client_secret": {
+            "type": "string"
+        },
+        "paypalCartDescription": {
+            "type": "string"
+        },
+        "paypalCurrency": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "description",
+        "mode",
+        "client_id",
+        "client_secret",
+        "paypalCartDescription",
+        "paypalCurrency"
+    ],
+    "additionalProperties": false
 }
